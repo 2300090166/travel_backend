@@ -26,7 +26,7 @@ public class SecurityConfig {
 
     private final JwtFilter jwtFilter;
 
-    @Value("${travelease.cors.allowed-origins:http://localhost:5173}")
+    @Value("${travelease.cors.allowed-origins:*}")
     private String allowedOrigins;
 
     public SecurityConfig(JwtFilter jwtFilter) {
