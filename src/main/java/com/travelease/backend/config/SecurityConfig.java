@@ -67,7 +67,7 @@ public class SecurityConfig {
 public CorsConfigurationSource corsConfigurationSource() {
     CorsConfiguration config = new CorsConfiguration();
     // Use setAllowedOriginPatterns instead of setAllowedOrigins when allowCredentials is true
-    config.setAllowedOriginPatterns(Arrays.asList(allowedOrigins.split(",")));
+    config.setAllowedOrigin(Arrays.asList(allowedOrigins.split(",")));
     config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
     config.setAllowedHeaders(Arrays.asList("*"));
     config.setAllowCredentials(true);
